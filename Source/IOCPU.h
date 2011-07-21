@@ -52,6 +52,8 @@ enum {
 	kIOCPUStateCount
 };
 
+typedef void (*ipi_handler_t)(void);
+
 class IOCPUInterruptController;
 
 extern IOCPUInterruptController *gIOCPUInterruptController;
