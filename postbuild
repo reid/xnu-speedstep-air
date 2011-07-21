@@ -1,0 +1,6 @@
+#/bin/sh
+kextunload /tmp/IntelEnhancedSpeedStep.kext
+cp -R Source/build/Debug/IntelEnhancedSpeedStep.kext /tmp
+/usr/sbin/chown -R root:wheel /tmp/IntelEnhancedSpeedStep.kext
+find /tmp/IntelEnhancedSpeedStep.kext -type d -exec /bin/chmod 0755 {} \;
+find /tmp/IntelEnhancedSpeedStep.kext -type f -exec /bin/chmod 0644 {} \;
