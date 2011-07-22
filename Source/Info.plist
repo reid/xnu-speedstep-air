@@ -11,7 +11,7 @@
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>net.mercurysquad.driver.${PRODUCT_NAME:identifier}</string>
+	<string>com.reidburke.air.${PRODUCT_NAME:identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
@@ -32,6 +32,25 @@
 			<integer>40</integer>
 			<key>DefaultPState</key>
 			<integer>-1</integer>
+			<key>PStateTable</key>
+			<array>
+				<array>
+					<integer>1600</integer>
+					<integer>950</integer>
+				</array>
+				<array>
+					<integer>1400</integer>
+					<integer>900</integer>
+				</array>
+				<array>
+					<integer>1200</integer>
+					<integer>900</integer>
+				</array>
+				<array>
+					<integer>800</integer>
+					<integer>900</integer>
+				</array>
+			</array>
 			<key>PStateTableDisabled</key>
 			<array>
 				<array>
@@ -48,13 +67,13 @@
 				</array>
 			</array>
 			<key>CFBundleIdentifier</key>
-			<string>net.mercurysquad.driver.${PRODUCT_NAME:identifier}</string>
+			<string>com.reidburke.air.${PRODUCT_NAME:identifier}</string>
 			<key>IOClass</key>
-			<string>net_mercurysquad_driver_${PRODUCT_NAME:identifier}</string>
+			<string>com_reidburke_air_${PRODUCT_NAME:identifier}</string>
 			<key>IOKitDebug</key>
 			<integer>0</integer>
 			<key>IOMatchCategory</key>
-			<string>net_mercurysquad_driver_${PRODUCT_NAME:identifier}</string>
+			<string>com_reidburke_air_${PRODUCT_NAME:identifier}</string>
 			<key>IOProviderClass</key>
 			<string>IOResources</string>
 			<key>IOResourceMatch</key>

@@ -200,8 +200,8 @@ int		NumberOfProcessors;	// # of cores/ACPI cpus actually
 /*
  * The IOKit driver class
  */
-class net_mercurysquad_driver_IntelEnhancedSpeedStep : public IOService {
-OSDeclareDefaultStructors(net_mercurysquad_driver_IntelEnhancedSpeedStep)
+class com_reidburke_air_IntelEnhancedSpeedStep : public IOService {
+OSDeclareDefaultStructors(com_reidburke_air_IntelEnhancedSpeedStep)
 	
 private:
 	IOWorkLoop*	workLoop;

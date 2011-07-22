@@ -8,7 +8,7 @@ extern "C" {
 #include "Utility.h"
 
 
-OSDefineMetaClassAndStructors(net_mercurysquad_driver_IntelEnhancedSpeedStep, IOService)
+OSDefineMetaClassAndStructors(com_reidburke_air_IntelEnhancedSpeedStep, IOService)
 OSDefineMetaClassAndStructors(AutoThrottler, OSObject)
 
 /**********************************************************************************/
@@ -224,9 +224,9 @@ int FindClosestPState(int wantedFreq) {
 
 /***************************************************************************************************/
 
-bool net_mercurysquad_driver_IntelEnhancedSpeedStep::init(OSDictionary* dict) {
+bool com_reidburke_air_IntelEnhancedSpeedStep::init(OSDictionary* dict) {
 	bool res = super::init(dict);
-	info("Initializing version 1.5.0 (C) Prashant Vaibhav <mercurysquad@yahoo.com>\n");
+	info("Initializing xnu-speedstep-air\n");
 	/* Allocate our spinlock for later use */
 	Lock = IOSimpleLockAlloc();
 	/* Check for a patched kernel which properly implements rtc_clock_stepped() */
@@ -296,14 +296,14 @@ bool net_mercurysquad_driver_IntelEnhancedSpeedStep::init(OSDictionary* dict) {
 	return res;
 }
 
-void net_mercurysquad_driver_IntelEnhancedSpeedStep::free(void) {
+void com_reidburke_air_IntelEnhancedSpeedStep::free(void) {
 	dbg("Freeing driver resources\n");
 	/* Deallocate the previously allocated spinlock */
 	IOSimpleLockFree(Lock);
 	super::free();
 }
 
-IOService* net_mercurysquad_driver_IntelEnhancedSpeedStep::probe(IOService* provider, SInt32* score) {
+IOService* com_reidburke_air_IntelEnhancedSpeedStep::probe(IOService* provider, SInt32* score) {
 	IOService* res = super::probe(provider, score);
 	dbg("Probing for Intel processor...\n");
 	
@@ -334,7 +334,7 @@ IOService* net_mercurysquad_driver_IntelEnhancedSpeedStep::probe(IOService* prov
 	return res;
 }
 
-bool net_mercurysquad_driver_IntelEnhancedSpeedStep::start(IOService *provider) {
+bool com_reidburke_air_IntelEnhancedSpeedStep::start(IOService *provider) {
 	bool res = super::start(provider);
 	if (!res) return false;
 	
@@ -378,7 +378,7 @@ bool net_mercurysquad_driver_IntelEnhancedSpeedStep::start(IOService *provider) 
 	return true;
 }
 
-void net_mercurysquad_driver_IntelEnhancedSpeedStep::stop(IOService *provider) {
+void com_reidburke_air_IntelEnhancedSpeedStep::stop(IOService *provider) {
 	dbg("Shutting down\n");
 	if (Throttler) {
 		Throttler->destruct();
