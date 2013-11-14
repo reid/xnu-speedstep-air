@@ -1,3 +1,9 @@
+# This project is dead. Use at your own risk. The authors can no longer support this software.
+
+I no longer own a MacBook Air Rev. A, so I can no longer help folks with this software.
+
+If you'd like to take over this project, please contact me.
+
 # xnu-speedstep-air
 
 xnu-speedstep-air is a kernel extension to keep my MacBook Air from overheating.
@@ -9,7 +15,7 @@ It's basically [xnu-speedstep][] with bugfixes and preloaded voltage tables for 
 
 ## Why?
 
-I own a MacBook Air Rev. A, which is well-known for its [thermal design problems][psm].
+I used to own a MacBook Air Rev. A, which is well-known for its [thermal design problems][psm].
 
 Fortunately, if you reduce the voltage to the processor, the system can
 run much cooler without thermal protection events happening
